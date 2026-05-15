@@ -1,0 +1,131 @@
+{
+    "FEATURE": {
+        "iccpd": {
+            "auto_restart": "enabled",
+            "delayed": "False",
+            "has_global_scope": "True",
+            "has_per_asic_scope": "False",
+            "high_mem_alert": "disabled",
+            "state": "enabled",
+            "support_syslog_rate_limit": "true"
+        },
+        "teamd": {
+            "auto_restart": "enabled",
+            "delayed": "False",
+            "has_global_scope": "False",
+            "has_per_asic_scope": "True",
+            "high_mem_alert": "disabled",
+            "state": "enabled",
+            "support_syslog_rate_limit": "true"
+        }
+    },
+    "MCLAG_DOMAIN": {
+        "1": {
+            "peer_ip": "10.10.10.1",
+            "peer_link": "PortChannel1",
+            "source_ip": "10.10.10.2"
+        }
+    },
+    "MCLAG_INTERFACE": {
+        "1|PortChannel2": {
+            "if_type": "PortChannel"
+        },
+        "1|PortChannel3": {
+            "if_type": "PortChannel"
+        }
+    },
+    "MCLAG_UNIQUE_IP": {
+        "Vlan4094": {
+            "unique_ip": "enable"
+        }
+    },
+    "PORT": {
+        "Ethernet0": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/0",
+            "index": "0",
+            "lanes": "25,26,27,28",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet4": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/4",
+            "index": "1",
+            "lanes": "29,30,31,32",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet28": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/28",
+            "index": "7",
+            "lanes": "5,6,7,8",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet32": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/32",
+            "index": "8",
+            "lanes": "13,14,15,16",
+            "mtu": "9100",
+            "speed": "40000"
+        }
+    },
+    "PORTCHANNEL": {
+        "PortChannel1": {
+            "admin_status": "up",
+            "fast_rate": "true",
+            "lacp_key": "auto",
+            "min_links": "1",
+            "mtu": "9100"
+        },
+        "PortChannel2": {
+            "admin_status": "up",
+            "fast_rate": "true",
+            "lacp_key": "auto",
+            "min_links": "1",
+            "mtu": "9100"
+        },
+        "PortChannel3": {
+            "admin_status": "up",
+            "fast_rate": "true",
+            "lacp_key": "auto",
+            "min_links": "1",
+            "mtu": "9100"
+        }
+    },
+    "PORTCHANNEL_MEMBER": {
+        "PortChannel1|Ethernet28": {},
+        "PortChannel1|Ethernet32": {},
+        "PortChannel2|Ethernet4": {},
+        "PortChannel3|Ethernet0": {}
+    },
+    "VLAN": {
+        "Vlan10": {
+            "vlanid": "10"
+        },
+        "Vlan4094": {
+            "vlanid": "4094"
+        }
+    },
+    "VLAN_INTERFACE": {
+        "Vlan4094": {},
+        "Vlan4094|10.10.10.2/30": {}
+    },
+    "VLAN_MEMBER": {
+        "Vlan10|PortChannel1": {
+            "tagging_mode": "tagged"
+        },
+        "Vlan10|PortChannel2": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan10|PortChannel3": {
+            "tagging_mode": "untagged"
+        },
+        "Vlan4094|PortChannel1": {
+            "tagging_mode": "tagged"
+        }
+    }
+}
